@@ -134,6 +134,14 @@ var setContainer = function (options) {
   }
 };
 
+var resetContainer = function(){
+  __containerElement = null;
+}
+
+var unmount = function(){
+  resetContainer();
+}
+
 var startAnimateTopScroll = function(y, options, to, target) {
 
   window.clearTimeout(__delayTimeout);
@@ -187,4 +195,5 @@ module.exports = {
   scrollToBottom: scrollToBottom,
   scrollTo: scrollTo,
   scrollMore: scrollMore,
+  unmount: unmount	
 };
